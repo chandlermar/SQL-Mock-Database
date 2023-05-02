@@ -18,8 +18,6 @@ class Database:
             print("!Failed to create database " + dbName + " because it already exists.") # pragma: no cover
             return False
 
-       
-
     def drop_database(self, dbName, startingDir):
         dir = os.path.join(startingDir, dbName)
         if os.path.exists(dir):
