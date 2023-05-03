@@ -33,5 +33,5 @@ jobs:
     - name: Run Unit Tests
       run: |
         pytest final-db-tested/
-        coverage run -m pytest final-deb-tested/test_db.py
+        coverage run -m pytest final-db-tested/test_db.py
         
