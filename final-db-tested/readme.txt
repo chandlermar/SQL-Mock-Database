@@ -2,7 +2,10 @@ Chandler Martin
 CS333 Final Project
 MOCK SQL DATABASE
 Create and manage directories and files within a mock SQL Database using the chosen commands.
+
 *** Expected output if you wish to test with the commands provided in PA1_test.sql is in output.png ***
+        *** Since the demo, I have finished github actions for my tests. Link is below. ***
+                    ***https://github.com/chandlermar/SQL-Mock-Database***
 
 Approx Code Coverage: 
 
@@ -15,18 +18,23 @@ Approx Code Coverage:
     ---------------------------------
     TOTAL           144     43    70%
 
-To Test:
+To Dockerize/Test:
 
-    ***NOTE: Before testing, all created directories through the program must be deleted, including "db_test" which is created and persists after test execution to indicate successful testing.
+    ***NOTE: Before testing, all created directories through the program must be deleted, including "db_test" which is created and persists after local test execution to indicate successful testing.
              The tests are run before program execution, so the program can be executed like normal after testing commands are inputted if the user chooses.
 
-    docker build -t pa-final .
-    docker run -it pa-final
-    (Type 'EXIT' to exit the program loop or force quit with CNTRL+C)
+    To export test results to coverage.txt when dockerizing the application:
+
+        docker build -t pa-final .
+        docker run -it pa-final
+
+        (Type 'EXIT' to exit the program loop or force quit with CNTRL+C)
+
+    If the terminal wont allow you to start the program after running tests, you can always open docker and use command "python3 PA1.py"
 
 To run: 
 
-    Python3 PA1.py
+    python3 PA1.py
 
         Commands:
             CREATE DATABASE db_1                                        (Creates new folder/directory)
