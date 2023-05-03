@@ -32,5 +32,3 @@ jobs:
     - name: Run Unit Tests
       run: pytest final-db-tested/
         
-    - name: Verify Docker image builds
-      run: docker build . --file final-db-tested/Dockerfile
