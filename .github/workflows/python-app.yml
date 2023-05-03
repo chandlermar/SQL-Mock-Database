@@ -30,7 +30,7 @@ jobs:
         pip install pytest
         
     - name: Run Unit Tests
-      run: pytest final-db-tested/test_db
+      run: pytest final-db-tested/
         
     - name: Verify Docker image builds
       run: docker build . --file Dockerfile
