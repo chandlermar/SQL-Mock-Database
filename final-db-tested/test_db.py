@@ -14,8 +14,8 @@ class testCases(unittest.TestCase):
   #Tests that databases are created when valid, arent created when already existing.
   def test_db_create(self):
     assert(self.database.create_database("db_1", self.startingDir) == True)
-    assert(self.database.create_database("db_test", self.startingDir) == True)
-    assert(self.database.create_database("db_test", self.startingDir) == False)
+    assert(self.database.create_database("db_testy", self.startingDir) == True)
+    assert(self.database.create_database("db_testy", self.startingDir) == False)
 
   #Integration test
   def int_1(self):
@@ -42,8 +42,8 @@ class testCases(unittest.TestCase):
   #Tests that when a database is selected that isTable flag is flipped, database to be used is correct, and action is completed.
   def test_use_db(self): 
     assert(self.database.isTable == 0)
-    assert(self.database.use_database(["USE", "db_test"], self.startingDir) == True)
-    assert(self.table.currentDatabase == "db_test")
+    assert(self.database.use_database(["USE", "db_testy"], self.startingDir) == True)
+    assert(self.table.currentDatabase == "db_testy")
     assert(self.database.isTable == 1)
 
   #Integration Test
